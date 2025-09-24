@@ -1,0 +1,22 @@
+  [1m[35mSQL (9.4ms)[0m  [1m[35mSET search_path TO public /*application='PrasadBackendCrud'*/[0m
+  [1m[35m (297.5ms)[0m  [1m[35mCREATE DATABASE "prasad_backend_crud_development" ENCODING = 'unicode' /*application='PrasadBackendCrud'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='PrasadBackendCrud'*/[0m
+  [1m[35m (96.5ms)[0m  [1m[35mCREATE DATABASE "prasad_backend_crud_test" ENCODING = 'unicode' /*application='PrasadBackendCrud'*/[0m
+  [1m[35m (20.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='PrasadBackendCrud'*/[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='PrasadBackendCrud'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2898098168213187660) /*application='PrasadBackendCrud'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PrasadBackendCrud'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PrasadBackendCrud'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (4.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-24 06:33:56.006437', '2025-09-24 06:33:56.006440') RETURNING "key" /*application='PrasadBackendCrud'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2898098168213187660) /*application='PrasadBackendCrud'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PrasadBackendCrud'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2898098168213187660) /*application='PrasadBackendCrud'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PrasadBackendCrud'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PrasadBackendCrud'*/[0m
+Migrating to CreateBooks (20250924063754)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='PrasadBackendCrud'*/[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "name" character varying, "pages" integer, "author" character varying, "price" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='PrasadBackendCrud'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250924063754') RETURNING "version" /*application='PrasadBackendCrud'*/[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT /*application='PrasadBackendCrud'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2898098168213187660) /*application='PrasadBackendCrud'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PrasadBackendCrud'*/[0m
